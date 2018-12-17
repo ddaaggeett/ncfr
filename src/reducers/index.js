@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux'
-import main from './main'
+import { combineReducers } from 'redux';
+import restaurant from './restaurant';
 
 export default combineReducers({
-        main,
+        restaurant,
 })
