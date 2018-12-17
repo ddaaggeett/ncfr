@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Dave Daggett',
   },
-  pathPrefix: "/ddaaggeett.xyz",
+  pathPrefix: "/ncfr",
   plugins: [
     'gatsby-plugin-react-helmet',
     {

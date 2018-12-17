@@ -1,14 +1,14 @@
 {
-  "name": "ddaaggeett",
+  "name": "ncfr",
   "author": "Dave Daggett (david.g.daggett@gmail) <https://github.com/ddaaggeett>",
-  "description": "personal website",
-  "homepage": "https://github.com/ddaaggeett/ddaaggeett.xyz#readme",
+  "description": "menu website",
+  "homepage": "https://github.com/ddaaggeett/ncfr#readme",
   "bugs": {
-    "url": "https://github.com/ddaaggeett/ddaaggeett.xyz/issues"
+    "url": "https://github.com/ddaaggeett/ncfr/issues"
   },
   "version": "0.0.1",
   "private": "false",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -43,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddaaggeett/ddaaggeett.xyz"
+    "url": "https://github.com/ddaaggeett/ncfr"
   }
 }
