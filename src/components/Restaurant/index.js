@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { emailConfigs } from '../../../../configs/emailConfigs'
 import RestaurantHome from './dumb/RestaurantHome'
 import MenuHome from './dumb/MenuHome'
 import Loading from './dumb/Loading'
 import Footer from '../Blooprint/dumb/Footer'
-import client_data from '../../../../configs/restaurant/clients'
 import MediaQuery from 'react-responsive'
 import { handleBrowserTitleChange } from '../../functions'
 
@@ -13,24 +11,11 @@ class Menu extends Component {
     constructor(props) {
         super(props)
 
-        var io = require('socket.io-client')
-        if (process.env.NODE_ENV === "production") {
-            console.log('socket.io host server is PRODUCTION mode')
-            this.socket = io.connect('http://'+emailConfigs.blooprint+':1235')
-        }
-        else {
-            console.log('socket.io host server is DEV mode')
-            this.socket = io.connect('http://localhost:1235')
-        }
-
         this.restaurantName = 'ncfr' // TODO: as part of spreadsheet - used to select spreadsheet from client list
     }
 
     componentWillMount() {
-        this.socket.emit('getMenuData', this.restaurantName)
-        this.socket.on('mountMenuData', function(data) {
-            this.handleDataRetrieval(data)
-        }.bind(this))
+            // get-sheet-done
     }
 
     componentDidMount() {

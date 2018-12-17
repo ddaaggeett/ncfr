@@ -9,28 +9,28 @@ const RestaurantMedia = (props) => {
                     if( (tableline.item === 'map') && (tableline.value != undefined) ) {
                         return (
                             <a className="restaurant_home_item" href={tableline.value} target="_blank">
-                                <img src={require('../../../../assets/img/maps.png')} className="restaurant_home_media_item"/>
+                                <img src={require('../../../images/maps.png')} className="restaurant_home_media_item"/>
                             </a>
                         )
                     }
                     else if( (tableline.item === 'facebook') && (tableline.value != undefined) ) {
                         return (
                             <a className="restaurant_home_item" href={tableline.value} target="_blank">
-                                <img src={require('../../../../assets/img/facebook.png')} className="restaurant_home_media_item" className="fb_icon" />
+                                <img src={require('../../../images/facebook.png')} className="restaurant_home_media_item" className="fb_icon" />
                             </a>
                         )
                     }
                     else if( (tableline.item === 'twitter') && (tableline.value != undefined) ) {
                         return (
                             <a className="restaurant_home_item" href={tableline.value} target="_blank">
-                                <img src={require('../../../../assets/img/twitter.png')} className="restaurant_home_media_item" className="fb_icon" />
+                                <img src={require('../../../images/twitter.png')} className="restaurant_home_media_item" className="fb_icon" />
                             </a>
                         )
                     }
                     else if( (tableline.item === 'instagram') && (tableline.value != undefined) ) {
                         return (
                             <a className="restaurant_home_item" href={tableline.value} target="_blank">
-                                <img src={require('../../../../assets/img/instagram.png')} className="restaurant_home_media_item" className="fb_icon" />
+                                <img src={require('../../../images/instagram.png')} className="restaurant_home_media_item" className="fb_icon" />
                             </a>
                         )
                     }
