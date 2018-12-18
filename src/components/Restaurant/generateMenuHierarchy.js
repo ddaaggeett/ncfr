@@ -23,19 +23,19 @@ const generateMenuHierarchy = function(data) {
     var prevSection = ''
     const appendcurrentSectionItemsArray = (tableline) => {
         var item = {
-            menu: tableline.menu,
-            section: tableline.section,
-            itemtext: tableline.itemtext,
-            itemsubtext: tableline.itemsubtext,
-            price: tableline.price,
-            sectioncomment: tableline.sectioncomment,
-            menucomment: tableline.menucomment
+            menu: tableline[0],
+            section: tableline[2],
+            itemtext: tableline[4],
+            itemsubtext: tableline[5],
+            price: tableline[6],
+            sectioncomment: tableline[3],
+            menucomment: tableline[1]
         }
         currentSectionItemsArray.push(item)
     }
     data.map((tableline, index) => {
-        var currentMenu = tableline.menu
-        var currentSection = tableline.section
+        var currentMenu = tableline[0]
+        var currentSection = tableline[2]
         if(data[index+1] === undefined) {
             if(currentSection == prevSection) {
                 appendcurrentSectionItemsArray(tableline)
