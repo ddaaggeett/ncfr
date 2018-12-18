@@ -4,7 +4,6 @@ import MenuHome from './dumb/MenuHome'
 import Loading from './dumb/Loading'
 import Footer from '../Blooprint/dumb/Footer'
 import MediaQuery from 'react-responsive'
-import { handleBrowserTitleChange } from '../../functions'
 import GetSheetDone from 'get-sheet-done'
 import { spreadsheet } from '../../../config'
 
@@ -12,8 +11,6 @@ class Menu extends Component {
 
     constructor(props) {
         super(props)
-
-        this.restaurantName = 'ncfr' // TODO: as part of spreadsheet - used to select spreadsheet from client list
     }
 
         UNSAFE_componentWillMount() {
@@ -34,10 +31,6 @@ class Menu extends Component {
                         const data = sheet.data.slice(1)
                         this.props.setMenuData(data)
                 })
-        }
-
-        componentDidMount() {
-                handleBrowserTitleChange(this.restaurantName, 'prices') // TODO
         }
 
     render () {

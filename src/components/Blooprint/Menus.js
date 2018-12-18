@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Header from './dumb/Header'
-import { handleBrowserTitleChange } from '../../functions'
 
 class Menus extends Component {
-
-    componentDidMount() {
-        handleBrowserTitleChange('Menu Listings', 'food')
-    }
 
     render() {
         return (
