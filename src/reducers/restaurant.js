@@ -13,14 +13,28 @@ const initialState = {
 export default function restaurant(state = initialState, action) {
 	switch(action.type) {
 
-		case 'SET_SPREADSHEET_DATA':
+		case 'SET_INFO_DATA':
 
 			return {
 				...state,
-				restaurantInfo: action.data[0],
-                		restaurantHours: action.data[1],
-                		menus: generateMenuHierarchy(action.data[2])
+				restaurantInfo: action.data
 			}
+
+		case 'SET_HOURS_DATA':
+
+			return {
+				...state,
+				restaurantHours: action.data
+			}
+
+
+		case 'SET_MENU_DATA':
+
+			return {
+				...state,
+				menus: generateMenuHierarchy(action.data)
+			}
+
 
 		case 'SET_OPENED_MENU':
 			return {

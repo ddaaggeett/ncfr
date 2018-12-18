@@ -1,6 +1,18 @@
-export function setSpreadsheetData(data) {
+export function setInfoData(data) {
     return {
-        type: 'SET_SPREADSHEET_DATA',
+        type: 'SET_INFO_DATA',
+        data
+    }
+}
+export function setHoursData(data) {
+    return {
+        type: 'SET_HOURS_DATA',
+        data
+    }
+}
+export function setMenuData(data) {
+    return {
+        type: 'SET_MENU_DATA',
         data
     }
 }
