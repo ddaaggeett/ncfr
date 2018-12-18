@@ -17,12 +17,12 @@ class MenuHeader extends Component {
                 <div>
                     <Link to={'/'}>
                         <h1 className="menu_header" id="mobile_menu_header">{this.props.restaurant.restaurantInfo.map((tableline) => {
-                            if( tableline.item == 'name' ) {
+                            if( tableline[0] == 'name' ) {
                                 return (
                                     <div className="link" onClick={() => {
                                             this.props.action_viewHome()
                                         }}>
-                                        {tableline.value}
+                                        {tableline[1]}
                                     </div>
                                 )
                             }
@@ -36,12 +36,12 @@ class MenuHeader extends Component {
                 <div>
                     <Link to={'/'}>
                         <h1 className="menu_header" id="tablet_menu_header">{this.props.restaurant.restaurantInfo.map((tableline) => {
-                            if( tableline.item == 'name' ) {
+                            if( tableline[0] == 'name' ) {
                                 return (
                                     <div className="link" onClick={() => {
                                             this.props.action_viewHome()
                                         }}>
-                                        {tableline.value}
+                                        {tableline[1]}
                                     </div>
                                 )
                             }
@@ -57,12 +57,12 @@ class MenuHeader extends Component {
                 <div>
                     <Link to={'/'}>
                         <h1 className="menu_header">{this.props.restaurant.restaurantInfo.map((tableline) => {
-                            if( tableline.item == 'name' ) {
+                            if( tableline[0] == 'name' ) {
                                 return (
                                     <div className="link" onClick={() => {
                                             this.props.action_viewHome()
                                         }}>
-                                        {tableline.value}
+                                        {tableline[1]}
                                     </div>
                                 )
                             }

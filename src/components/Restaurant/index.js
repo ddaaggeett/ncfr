@@ -5,6 +5,8 @@ import Loading from './dumb/Loading'
 import Footer from '../Blooprint/dumb/Footer'
 import MediaQuery from 'react-responsive'
 import { handleBrowserTitleChange } from '../../functions'
+import GetSheetDone from 'get-sheet-done'
+import { spreadsheet } from '../../../config'
 
 class Menu extends Component {
 
@@ -14,17 +16,29 @@ class Menu extends Component {
         this.restaurantName = 'ncfr' // TODO: as part of spreadsheet - used to select spreadsheet from client list
     }
 
-    componentWillMount() {
-            // get-sheet-done
-    }
+        UNSAFE_componentWillMount() {
+                GetSheetDone.raw(spreadsheet, 2)
+                .then(sheet => {
+                        const data = sheet.data.slice(1)
+                        this.props.setInfoData(data)
+                })
 
-    componentDidMount() {
-        handleBrowserTitleChange(this.restaurantName, 'prices') // TODO
-    }
+                GetSheetDone.raw(spreadsheet, 3)
+                .then(sheet => {
+                        const data = sheet.data.slice(1)
+                        this.props.setHoursData(data)
+                })
 
-    handleDataRetrieval = function(data) {
-        this.props.setSpreadsheetData(data)
-    }
+                GetSheetDone.raw(spreadsheet, 4)
+                .then(sheet => {
+                        const data = sheet.data.slice(1)
+                        this.props.setMenuData(data)
+                })
+        }
+
+        componentDidMount() {
+                handleBrowserTitleChange(this.restaurantName, 'prices') // TODO
+        }
 
     render () {
 

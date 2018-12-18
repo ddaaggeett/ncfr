@@ -7,8 +7,8 @@ const ScheduleItem = (props) => {
     // console.log('MenuItem props\n',props)
     return (
         <li className="schedule_item">
-            <Day day={props.item.day} />
-            <Time time={props.item.time} />
+            <Day day={props.item[0]} />
+            <Time time={props.item[1]} />
         </li>
     )
 }
