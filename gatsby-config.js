@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Dave Daggett',
+    title: 'NCFR',
   },
   pathPrefix: "/ncfr",
   plugins: [
