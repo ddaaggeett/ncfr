@@ -433,7 +433,7 @@ p {
     margin-top: 10px;
 }
 .item_lr {
-    // max-width: 80%;
+    /* // max-width: 80%; */
     display: inline-block;
     vertical-align: middle;
 }
@@ -457,7 +457,7 @@ p {
 	margin-top: 13px;
 }
 .nav_button p {
-	// margin-top: 27px;
+	/* // margin-top: 27px; */
 }
 .menu_button:hover {
     background-color: #282828;
@@ -549,7 +549,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    // border: 1px dashed white;
+    /* // border: 1px dashed white; */
 }
 #schedule_seperator {
     width: 150px;
@@ -571,7 +571,7 @@ p {
 }
 #day {
     right: 50%;
-    // float: left;
+    /* // float: left; */
     text-align: right;
     color: white;
 }
